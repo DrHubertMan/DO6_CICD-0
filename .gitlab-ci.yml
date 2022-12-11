@@ -8,7 +8,13 @@ Compile:
         image: ubuntu:latest
         stage: build
         script:
-                - echo "Helo i am build"
+                - make -C src/SimpleBash/cat s21_cat
+        artifacts:
+                paths:
+                        - src/cat/s21_cat
+                        - src/grep/s21_grep
+                expire_in: 30 days
+
 Style:
         when: always
         stage: test
