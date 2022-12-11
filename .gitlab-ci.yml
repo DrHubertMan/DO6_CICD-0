@@ -1,4 +1,5 @@
-image: ubuntu:latest
+defalut:
+        image: ubuntu:latest
 stages:
         - build
         - test
