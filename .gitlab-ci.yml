@@ -1,6 +1,7 @@
 stages:
         - build
         - test
+        - integer
         - deploy
 
 Compile:
@@ -21,6 +22,16 @@ Style:
         stage: test
         script:
                 - make -C src/SimpleBash/cat lint
+                - make -C src/SimpleBash/grep lint
+
+IntegralTest:
+        when: always
+        stage: integer
+        script:
+                - make -C src/SimpleBash/cat test
+                - make -C src/SimpleBash/grep test
+
+
 Prodaction:
         when: always
         stage: deploy
