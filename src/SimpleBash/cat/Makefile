@@ -12,7 +12,7 @@ s21_cat.o:
 
 lint:
 	clang-format -n *.c
-	clang-format -n *.c
+	clang-format -n *.h
 
 valgrind:
 	valgrind  --trace-children=yes --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes  ./s21_cat ../bytes.txt
