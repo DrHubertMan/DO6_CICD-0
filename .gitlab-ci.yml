@@ -18,4 +18,4 @@ Prodaction:
         when: always
         stage: deploy
         script:
-                - echo "Hello deploy"
+                - echo "Hello ddeploy"
