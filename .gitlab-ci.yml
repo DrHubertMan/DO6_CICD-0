@@ -5,17 +5,17 @@ stages:
         - deploy
 
 Compile:
-        when: [push]
+        when: always
         stage: build
         script:
                 - echo "Hello i am build"
 Style:
-        when: [push]
+        when: always
         stage: test
         script:
                 - echo "Hello test"
 Prodaction:
-        when: [push]
+        when: always
         stage: deploy
         script:
                 - echo "Hello deploy"
