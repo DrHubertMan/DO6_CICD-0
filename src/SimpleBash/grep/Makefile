@@ -5,10 +5,10 @@ OFLAGS = -Wall -Werror -Wextra -o
 all:s21_grep
 
 s21_grep: s21_grep.o
-	$(CC) $(OFLAGS) s21_grep s21_grep.o
+	$(CC) -o s21_grep s21_grep.o
 
 s21_grep.o:
-	$(CC) $(CFLAGS) s21_grep.c
+	$(CC) -c s21_grep.c
 
 lint: 
 	python3 ../cpplint.py --extensions=c  *.c *.h
