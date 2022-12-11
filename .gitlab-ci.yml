@@ -1,0 +1,21 @@
+image: ubuntu:latest
+stages:
+        - build
+        - test
+        - deploy
+
+Compile:
+        when: [push]
+        stage: build
+        script:
+                - echo "Hello i am build"
+Style:
+        when: [push]
+        stage: test
+        script:
+                - echo "Hello test"
+Prodaction:
+        when: [push]
+        stage: deploy
+        script:
+                - echo "Hello deploy"
