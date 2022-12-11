@@ -9,6 +9,7 @@ Compile:
         stage: build
         script:
                 - make -C src/SimpleBash/cat s21_cat
+                - make -C src/SimpleBash/grep s21_grep
         artifacts:
                 paths:
                         - src/cat/s21_cat
