@@ -5,8 +5,7 @@ stages:
 
 Compile:
         when: always
-        default:
-                image: ubuntu:latest
+        image: ubuntu:latest
         stage: build
         script:
                 - echo "Hello i am build"
