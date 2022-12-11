@@ -8,7 +8,7 @@ Compile:
         image: ubuntu:latest
         stage: build
         script:
-                - echo "Hello i am build"
+                - echo "Helo i am build"
 Style:
         when: always
         stage: test
