@@ -11,7 +11,8 @@ s21_grep.o:
 	$(CC) -c s21_grep.c
 
 lint: 
-	python3 ../cpplint.py --extensions=c  *.c *.h
+	clang-format -n *.c
+	clang-format -n *.h
 
 valgrind:
 	valgrind --trace-children=yes --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes  ./s21_grep -n for s21_grep.c
