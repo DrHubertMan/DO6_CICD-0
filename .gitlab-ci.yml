@@ -19,7 +19,7 @@ Style:
         when: always
         stage: test
         script:
-                - echo "Hello test"
+                - make -C src/SimpleBash/cat lint
 Prodaction:
         when: always
         stage: deploy
