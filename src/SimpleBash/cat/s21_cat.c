@@ -1,4 +1,4 @@
-#include"s21_cat.h"
+#include "s21_cat.h"
 
 int main(int argc, char *argv[]) {
   struct opt_cat pars = {0};
@@ -6,9 +6,9 @@ int main(int argc, char *argv[]) {
   int next_c = 0;
   int counter = 0, new_line = 0, prev_c = 1, test = 0, test_y = 0, allright = 1;
   static struct option long_opt[] = {{"--number-nonblank", 0, 0, 'b'},
-                                       {"--number", 0, 0, 'n'},
-                                       {"--squeeze-blank", 0, 0, 's'},
-                                       {0, 0, 0, 0}};
+                                     {"--number", 0, 0, 'n'},
+                                     {"--squeeze-blank", 0, 0, 's'},
+                                     {0, 0, 0, 0}};
 
   while ((next_c = getopt_long(argc, argv, "benstvET", long_opt, &opt_i)) !=
          -1) {

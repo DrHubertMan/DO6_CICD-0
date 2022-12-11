@@ -1,0 +1,27 @@
+stages:
+        - build
+        - test
+        - deploy
+
+Compile:
+        when: always
+        image: ubuntu:latest
+        stage: build
+        script:
+                - make -C src/SimpleBash/cat s21_cat
+        artifacts:
+                paths:
+                        - src/cat/s21_cat
+                        - src/grep/s21_grep
+                expire_in: 30 days
+
+Style:
+        when: always
+        stage: test
+        script:
+                - echo "Hello test"
+Prodaction:
+        when: always
+        stage: deploy
+        script:
+                - echo "Hello ddeploy"

@@ -11,7 +11,8 @@ s21_cat.o:
 	$(CC) $(CFLAGS) s21_cat.c
 
 lint:
-	python3 ../cpplint.py --extensions=c  *.c *.h
+	clang-format -n *.c
+	clang-format -n *.c
 
 valgrind:
 	valgrind  --trace-children=yes --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes  ./s21_cat ../bytes.txt
