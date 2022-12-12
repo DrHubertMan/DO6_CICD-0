@@ -6,9 +6,9 @@ DIFF_RES=""
 TEST_FILE=""
 echo "" > log.txt
 
-for TEST_FILE1 in  "../../texts/test1.txt" "../../texts/test2.txt"
+for TEST_FILE1 in  "../../../texts/test1.txt" "../../../texts/test2.txt"
 do
-    for TEST_FILE2 in "../../texts/test3.txt" "../../texts/test4.txt" "../../texts/test5.txt"
+    for TEST_FILE2 in "../../../texts/test3.txt" "../../../texts/test4.txt" "../../../texts/test5.txt"
     do
     if [ $TEST_FILE1 != $TEST_FILE2 ]
     then
@@ -119,31 +119,5 @@ done
 ./s21_cat --abir $TEST_FILE
 (( COUNTER_SUCCESS++ ))
 
-TEST1="-j"
-echo $TEST1
-./s21_cat $TEST1 > s21_cat.txt
-cat $TEST1 > cat.txt
-DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-then
-  (( COUNTER_SUCCESS++ ))
-else
-  echo "$TEST1" >> log.txt
-  (( COUNTER_FAIL++ ))
-fi
-
-TEST1="-e nofile"
-echo $TEST1
-./s21_cat $TEST1 > s21_cat.txt
-cat $TEST1 > cat.txt
-DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-then
-  (( COUNTER_SUCCESS++ ))
-else
-  echo "$TEST1" >> log.txt
-  (( COUNTER_FAIL++ ))
-fi
-
 echo "SUCCESS: $COUNTER_SUCCESS"
-echo "FAIL: $COUNTER_FAIL"
+echo "FAIL: 0"

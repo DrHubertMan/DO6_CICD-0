@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
   int next_c = 0;
   int counter = 0, new_line = 0, prev_c = 1, test = 0, test_y = 0, allright = 1;
   static struct option long_opt[] = {{"--number-nonblank", 0, 0, 'b'},
-            {"--number", 0, 0, 'n'},
+                                     {"--number", 0, 0, 'n'},
                                      {"--squeeze-blank", 0, 0, 's'},
                                      {0, 0, 0, 0}};
 
