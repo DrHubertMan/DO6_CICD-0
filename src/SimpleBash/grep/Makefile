@@ -11,9 +11,9 @@ s21_grep.o:
 	$(CC) -c s21_grep.c
 
 lint: 
-	clang-format -n *.c
 	clang-format -n *.h
-
+	clang-format -n *.c
+	
 test:
 	sh grep.sh
 
