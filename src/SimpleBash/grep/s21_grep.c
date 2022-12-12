@@ -16,7 +16,7 @@ int parser(int argc, char *argv[], struct opt_grep *pars, char *template) {
   int i = 0, result = 0;
   while ((i = getopt(argc, argv, "e:ivclnhsf:o")) != -1) {
     if (i == 'e') {
-      pars->opt_e = 1;              
+      pars->opt_e = 1;
       snprintf(template, buff_size, optarg);
     } else if (i == 'i') {
       pars->opt_i = 1;

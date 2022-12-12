@@ -15,7 +15,8 @@ lint:
 	clang-format -n *.c
 
 test:
-	sh test_cat.sh
+	chmod +x test_cat.sh
+	./test_cat.sh
 
 valgrind:
 	valgrind  --trace-children=yes --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes  ./s21_cat ../bytes.txt

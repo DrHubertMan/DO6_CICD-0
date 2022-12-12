@@ -15,7 +15,8 @@ lint:
 	clang-format -n *.c
 	
 test:
-	sh grep.sh
+	chmod +x grep.sh
+	./grep.sh
 
 valgrind:
 	valgrind --trace-children=yes --track-fds=yes --leak-check=full --show-leak-kinds=all --track-origins=yes  ./s21_grep -n for s21_grep.c
