@@ -6,8 +6,7 @@ all:s21_grep
 
 s21_grep: s21_grep.o
 	$(CC) -o s21_grep s21_grep.o
-	ls
-
+	
 s21_grep.o:
 	$(CC) -c s21_grep.c
 
