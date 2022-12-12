@@ -18,14 +18,14 @@ Compile:
                 expire_in: 30 days
 
 Style:
-        when: always
+        when: on_success
         stage: test
         script:
                 - make -C src/SimpleBash/cat lint
                 - make -C src/SimpleBash/grep lint
 
 IntegralTest:
-        when: always
+        when: on_success
         stage: integer
         script:
                 - make -C src/SimpleBash/cat test
@@ -33,7 +33,7 @@ IntegralTest:
 
 
 Prodaction:
-        when: always
+        when: on_success
         stage: deploy
         script:
                 - echo "Hello ddeploy"
