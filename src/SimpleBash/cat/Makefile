@@ -14,7 +14,7 @@ lint:
 	clang-format -n *.h
 	clang-format -n *.c
 
-test:
+test: s21_cat.o
 	chmod +x test_cat.sh
 	./test_cat.sh
 
