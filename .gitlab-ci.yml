@@ -14,7 +14,7 @@ Compile:
         artifacts:
                 paths:
                         - src/SimpleBash/cat/s21_cat
-                        - src/SimpleBash/s21_grep
+                        - src/SimpleBash/grep/s21_grep
                 expire_in: 30 days
 
 Style:
@@ -29,7 +29,7 @@ IntegralTest:
         stage: integer
         script:
                 - make -C src/SimpleBash/cat test
-                #- make -C src/SimpleBash/grep test
+                - make -C src/SimpleBash/grep test
 
 
 Prodaction:
