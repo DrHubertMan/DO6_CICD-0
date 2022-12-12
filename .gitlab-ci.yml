@@ -36,4 +36,4 @@ Prodaction:
         when: on_success
         stage: deploy
         script:
-                - echo "Hello ddeploy"
+                - echo "Hello deploy"
