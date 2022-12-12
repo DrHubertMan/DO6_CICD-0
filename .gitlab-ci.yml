@@ -36,4 +36,6 @@ Prodaction:
         when: on_success
         stage: deploy
         script:
+                - cd src/SimpleBash/cat
+                - ls
                 - echo "Hello deploy"
