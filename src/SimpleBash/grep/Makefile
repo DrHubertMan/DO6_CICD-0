@@ -16,7 +16,7 @@ lint:
 	clang-format --Werror -n *.c
 	
 test: s21_grep.o
-	chmod 777 grep.sh
+	chmod +x grep.sh
 	./grep.sh 
 
 valgrind:
