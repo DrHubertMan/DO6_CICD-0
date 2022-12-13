@@ -75,7 +75,8 @@ int save_patt_file(char *template, char *temp) {
     if (template[i - 1] == '|') template[i - 1] = '\0';
     fclose(fp);
   }
-  return (i == -1) ? -1 : (i + 1);
+  return (i == -1) ? -1 :
+   (i + 1);
 }
 
 void grep_file(struct opt_grep *pars, char *template, char *file) {

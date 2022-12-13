@@ -6,17 +6,17 @@ all:s21_grep
 
 s21_grep: s21_grep.o
 	$(CC) -o s21_grep s21_grep.o
-	ls
+
 	
 s21_grep.o:
 	$(CC) -c s21_grep.c
 
 lint: 
-	clang-format -n *.h
-	clang-format -n *.c
+	clang-format --Werror -n *.h
+	clang-format --Werror -n *.c
 	
 test: s21_grep.o
-	chmod +x grep.sh
+	chmod 777 grep.sh
 	./grep.sh 
 
 valgrind:

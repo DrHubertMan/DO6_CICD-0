@@ -11,8 +11,8 @@ s21_cat.o:
 	$(CC) $(CFLAGS) s21_cat.c
 
 lint:
-	clang-format -n *.h
-	clang-format -n *.c
+	clang-format --Werror -n *.h
+	clang-format --Werror -n *.c
 
 test: s21_cat.o
 	chmod +x test_cat.sh
