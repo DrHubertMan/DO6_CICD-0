@@ -31,7 +31,8 @@ IntegralTest:
                 - make -C src/SimpleBash/cat test
                 #- make -C src/SimpleBash/grep test
                 - cd src/SimpleBash/grep
-                - ls
+                - ./grep.sh
+                - cd -
 
 
 Production:
