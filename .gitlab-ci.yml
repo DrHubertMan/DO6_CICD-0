@@ -32,10 +32,9 @@ IntegralTest:
                 - make -C src/SimpleBash/grep test
 
 
-Prodaction:
+Production:
         when: on_success
         stage: deploy
         script:
-                - cd src/SimpleBash/grep
-                - ls
+
                 - echo "Hello deploy"
