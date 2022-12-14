@@ -6,7 +6,7 @@ stages:
 
 Compile:
         tags:
-                - project
+                - test
         when: always
         image: ubuntu:latest
         stage: build
@@ -21,7 +21,7 @@ Compile:
 
 Style:
         tags:
-                - project
+                - test
         when: on_success
         stage: test
         script:
@@ -30,7 +30,7 @@ Style:
 
 IntegralTest:
         tags:
-                - project
+                - test
         when: on_success
         stage: integer
         script:
@@ -44,7 +44,7 @@ IntegralTest:
 
 Production:
         tags:
-                - project
+                - test
         when: on_success
         stage: deploy
         script:
