@@ -35,7 +35,6 @@ IntegralTest:
         stage: integer
         script:
                 - make -C src/SimpleBash/cat test
-                #- make -C src/SimpleBash/grep test
                 - cd src/SimpleBash/grep
                 - chmod +x grep.sh
                 - ./grep.sh
@@ -48,5 +47,5 @@ Production:
         when: on_success
         stage: deploy
         script:
-
-                - echo "Hello deploy"
+                - scp src/SimpleBash/grep/s21_grep mammiemi@192.168.0.2:/home/mammiemi
+                - scp src/SimpleBash/cat/s21/cat mammiemi@192.168.0.2:/home/mammiemi
