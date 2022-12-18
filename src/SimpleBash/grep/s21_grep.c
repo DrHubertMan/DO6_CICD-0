@@ -50,7 +50,7 @@ int parser(int count, char **pars_str, struct opt_grep *pars, char *template) {
         } else if (pars_str[i][j + 1] == 'l') {
           pars->opt_l = 1;
           memset(pars_str[i], 0, 1);
-          continue;
+  continue;
         } else if (pars_str[i][j + 1] == 'n') {
           pars->opt_n = 1;
           memset(pars_str[i], 0, 1);
