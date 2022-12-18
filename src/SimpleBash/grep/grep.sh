@@ -106,5 +106,11 @@ do
   done
 done
 
+
 echo "SUCCESS: $COUNTER_SUCCESS"
 echo "FAIL: 0"
+
+if [$COUNTER_FAIL -eq 0]
+then
+  exit 1
+fi
