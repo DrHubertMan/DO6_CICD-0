@@ -47,5 +47,10 @@ Production:
         when: on_success
         stage: deploy
         script:
-                - scp src/SimpleBash/grep/s21_grep root@192.168.0.2:/home/mammiemi
-                - scp src/SimpleBash/cat/s21/cat root@192.168.0.2:/home/mammiemi1
+                - scp src/SimpleBash/grep/s21_grep root@192.168.0.2:/usr/local/bin
+                - scp src/SimpleBash/cat/s21/cat root@192.168.0.2:/usr/local/bin
+        artifacts:
+                paths:
+                        - /usr/local/bin
+                        - /usr/local/bin
+                expire_in: 30 days
