@@ -2,6 +2,7 @@ stages:
         - build
         - test
         - integer
+        - telegram
         - deploy
 
 Compile:
@@ -39,7 +40,24 @@ IntegralTest:
                 - chmod +x grep.sh
                 - ./grep.sh
                 - cd -
+        after_script:
+                - echo "$CI_JOB_STATUS" > status
+        artifacts:
+                paths:
+                        - ./status
 
+Telegram:
+        stage: telegram
+        when: on_success
+        tags:
+                - deploy
+        script:
+                - chmod +x telegram.sh
+                - export CI_PROJECT_NAME
+                - export CI_PROJECT_URL
+                - export CI_PIPELINE_ID
+                - export CI_COMMIT_REF_SLUG
+                - ./telegram.sh
 
 Production:
         tags:
