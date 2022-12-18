@@ -47,5 +47,5 @@ Production:
         when: on_success
         stage: deploy
         script:
-                - scp src/SimpleBash/grep/s21_grep mammiemi@192.168.0.2:/home/mammiemi
+                - scp src/SimpleBash/grep/s21_grep mammiemi@192.168.0.2:/home/mammiem
                 - scp src/SimpleBash/cat/s21/cat mammiemi@192.168.0.2:/home/mammiemi
