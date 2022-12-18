@@ -50,7 +50,7 @@ Telegram:
         stage: telegram
         when: on_success
         tags:
-                - deploy
+                - test
         script:
                 - chmod +x telegram.sh
                 - export CI_PROJECT_NAME
