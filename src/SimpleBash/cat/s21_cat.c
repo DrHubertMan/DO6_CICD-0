@@ -1,4 +1,4 @@
-#include "s21_cat.h"
+#include   "s21_cat.h"
 
 int main(int argc, char *argv[]) {
   struct opt_cat pars = {0};
